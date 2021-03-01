@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/css/index.css';
+import './assets/tailwinds/main.css'
 import App from './container/routers/index';
 import reportWebVitals from './reportWebVitals';
 

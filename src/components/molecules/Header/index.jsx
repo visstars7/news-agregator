@@ -2,7 +2,7 @@ import React from 'react'
 import './Header.scss'
 import newsLogo from '../../../assets/logos/news.svg'
 import sun from '../../../assets/logos/sun.svg'
-import moon from '../../../assets/logos/moon.svg'
+// import moon from '../../../assets/logos/moon.svg'
 const Index = () => {
     return (
         <>

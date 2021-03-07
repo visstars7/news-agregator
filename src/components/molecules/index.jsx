@@ -1,3 +1,4 @@
 import Header from './Header'
+import Category from './Category'
 
-export {Header}
+export {Header,Category}

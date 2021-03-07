@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
 import './Mainpage.scss';
-import {Header} from '../../../components' 
+import {Header,Category} from '../../../components' 
 
 const Index  = ()  =>  {
 
@@ -11,6 +11,7 @@ const Index  = ()  =>  {
     return (
         <div className="App">
             <Header/>
+            <Category/>
         </div>
     );
 }

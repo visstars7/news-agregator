@@ -2,7 +2,7 @@ import React from 'react'
 import './category.scss'
 const Index = () => {
     return (
-        <div className="overflow-auto p-3" id="category">
+        <div className="overflow-auto pt-3 px-1  h-12" id="category">
             <a href="religion">Religion</a>
             <a href="Buisness">Buisness</a>
             <a href="Technology">Technology</a>

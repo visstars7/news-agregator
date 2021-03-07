@@ -6,7 +6,7 @@ import sun from '../../../assets/logos/sun.svg'
 const Index = () => {
     return (
         <>
-            <div className="w-full bg-white flex flex-row justify-between shadow-lg">
+            <div className="fixed w-full bg-white flex flex-row justify-between shadow-lg">
                 <div className="p-5 text-right roboto-dark text-2xl flex"></div>
                 <div className="p-5 text-right roboto-dark text-2xl flex"> 
                     <img src={newsLogo} alt="newspaper" className="w-6 mr-2"/> News

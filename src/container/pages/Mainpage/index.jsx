@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
 import './Mainpage.scss';
-import {Header,Category,Gap, Card} from '../../../components' 
+import {Header,Category,Gap, Card,CardShadow} from '../../../components' 
 
 const Index  = ()  =>  {
 
@@ -21,7 +21,7 @@ const Index  = ()  =>  {
                 <Card/> 
                 <Card/> 
                 <Card/> 
-                <Card/> 
+                <CardShadow/> 
             </div>
         </div>
     );

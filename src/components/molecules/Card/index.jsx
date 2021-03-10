@@ -1,21 +1,27 @@
 import React from 'react'
 import Button from '../../atoms/Button/index'
+import iconPlane from '../../../assets/logos/icon-plane.svg'
 
 const index = () => {
     return (
-        <div className="bg-white w-11/12 mb-10 p-3 rounded-md flex flex-row justify-between shadow-lg">
+        <div className="bg-white w-11/12 mb-10 p-3 rounded-md flex flex-row justify-between shadow-lg dark:bg-darkCard">
             <div className="flex flex-col">
-                <span className="roboto-gray text-sm mb-2">
+                <span className="roboto-gray text-sm mb-2 dark:text-white">
                     Microsoft has published where indonesia is weirdest citizen in south asian
                 </span>
-                <span className="text-xs font-normal mb-3 text-gray-500 pr-3">
+                <span className="text-xs font-normal mb-3 text-gray-500 pr-3 dark:text-white">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. E..
                 </span>
-                <span style={{fontSize:"10px"}} className="font-normal text-gray-500">
+                <span style={{fontSize:"10px"}} className="font-normal text-gray-500 dark:text-white">
                     @Owngabriel  11 jan 2020 
                 </span>
                 <span className="mt-3 mb-3">
-                    <Button className="p-2 w-5/12 h-15 rounded text-white text-sm" style={{backgroundColor:"#5AB0FF"}} title="Read More"/>
+                    <Button
+                        className="p-2 w-7/12 h-15 rounded text-white text-sm flex z-0"
+                        style={{backgroundColor:"#5AB0FF"}}
+                        title="Read More"
+                        logo={iconPlane}
+                    />
                 </span>
             </div>
             <div className="my-auto">

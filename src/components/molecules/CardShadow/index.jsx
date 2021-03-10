@@ -2,7 +2,7 @@ import React from 'react'
 
 const index = () => {
     return (
-        <div className="animate-pulse bg-white w-11/12 mb-10 p-3 rounded-md flex flex-row justify-between shadow-lg">
+        <div className="animate-pulse bg-white w-11/12 mb-10 p-3 rounded-md flex flex-row justify-between shadow-lg dark:bg-darkCard">
             <div className="flex flex-col">
                 <div className="w-40 mt-5 mr-5 h-3 bg-gray-300 rounded"></div>
                 <div className="w-28 mt-2 mr-5 h-3 bg-gray-300 rounded"></div>

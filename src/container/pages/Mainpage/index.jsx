@@ -10,7 +10,7 @@ const Index  = ()  =>  {
     },[])
 
     return (
-        <div className="App dark:bg-dark">
+        <div className="App dark:bg-dark duration-500">
             <Favicon url="https://i.postimg.cc/9RLyyvHQ/attachment-124979000.jpg"/>
             <Header/>
             <Gap height="70px"/>

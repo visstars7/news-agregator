@@ -71,8 +71,8 @@ const Index  = ()  =>  {
                 <Category onClick={handleOnClick}/>
                 <Gap height="40px"/>
                 <div className="flex flex-col items-center" style={{height:'100vh'}}>
-                    <span className="roboto text-red-700 upppercase text-2xl">Error While Fetching Data</span>
-                    <span className="roboto text-red-600 upppercase text-2xl">Please Wait for 24H</span>
+                    <span className="roboto text-red-700 uppercase text-2xl">Error While Fetching Data</span>
+                    <span className="roboto text-red-600 uppercase text-md">Too Many Request, Please Stands For 24H</span>
                 </div>
             </div>
         );

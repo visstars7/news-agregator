@@ -7,6 +7,7 @@ import API from '../../../services'
 const Index  = ()  =>  {
 
     const [news,setNews] = useState([])
+    const [isError,setError] = useState(false)
     const [isLoading,setLoading] = useState(false)
 
     const handleOnClick = async (value) => {
@@ -16,7 +17,7 @@ const Index  = ()  =>  {
             setNews(res.data.articles)
         })
         .catch(err => {
-            setNews(err)
+            setError(true)
         })
         setLoading(true)
     }
@@ -27,7 +28,7 @@ const Index  = ()  =>  {
                 setNews(res.data.articles)
             })
             .catch(err => {
-                setNews(err)
+                setError(true)
             })
         setLoading(true)    
     }
@@ -36,6 +37,10 @@ const Index  = ()  =>  {
         document.title = "News"
         getNews()
     },[])
+
+    useEffect(() => {
+        console.log(news)
+    })
 
     if(!isLoading){
         return (
@@ -57,6 +62,22 @@ const Index  = ()  =>  {
         );
     }
 
+    if(isError){
+        return (
+            <div className="App dark:bg-dark duration-500">
+                <Favicon url="https://i.postimg.cc/9RLyyvHQ/attachment-124979000.jpg"/>
+                <Header/>
+                <Gap height="70px"/>
+                <Category onClick={handleOnClick}/>
+                <Gap height="40px"/>
+                <div className="flex flex-col items-center" style={{height:'100vh'}}>
+                    <span className="roboto text-red-700 upppercase text-2xl">Error While Fetching Data</span>
+                    <span className="roboto text-red-600 upppercase text-2xl">Please Wait for 24H</span>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="App dark:bg-dark duration-500">
             <Favicon url="https://i.postimg.cc/9RLyyvHQ/attachment-124979000.jpg"/>
@@ -68,11 +89,10 @@ const Index  = ()  =>  {
                 {
                     news.map((item) =>(
                         <Card
-                            key={item.title}
+                        
                             title={item.title}
                             content={item.description}
                             author={item.author}
-                            date={item.publishedAt}
                             url={item.url}
                             urlToImage={item.urlToImage}
                         />

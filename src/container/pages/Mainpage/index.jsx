@@ -38,10 +38,6 @@ const Index  = ()  =>  {
         getNews()
     },[])
 
-    useEffect(() => {
-        console.log(news)
-    })
-
     if(!isLoading){
         return (
             <div className="App dark:bg-dark duration-500">
@@ -89,11 +85,13 @@ const Index  = ()  =>  {
                 {
                     news.map((item) =>(
                         <Card
-                        
+
+                            id={item.title}
                             title={item.title}
                             content={item.description}
                             author={item.author}
                             url={item.url}
+                            date={item.publishedAt}
                             urlToImage={item.urlToImage}
                         />
                     ))
